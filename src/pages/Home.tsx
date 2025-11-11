@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import { Button } from "@/components/ui/button";
@@ -15,7 +16,8 @@ const Home = () => {
       image: seaCreaturesImg,
       description: "Discover the wonders of marine life",
       details: "From the graceful jellyfish that drift through ocean currents to the intelligent octopus with its problem-solving abilities, sea creatures represent some of nature's most fascinating designs. Explore dolphins' complex social structures, sea turtles' epic migrations, and the mysterious behaviors of deep-sea dwellers. Each species plays a vital role in maintaining the delicate balance of marine ecosystems.",
-      stats: ["10,000+ Species", "Ocean Depths: 0-11,000m", "Lifespan: Days to Centuries"]
+      stats: ["10,000+ Species", "Ocean Depths: 0-11,000m", "Lifespan: Days to Centuries"],
+      link: "/sea-creatures"
     },
     {
       id: "aquatic-plants",
@@ -23,7 +25,8 @@ const Home = () => {
       image: aquaticPlantsImg,
       description: "The foundation of ocean ecosystems",
       details: "Aquatic plants and algae form the backbone of marine life, producing over 70% of Earth's oxygen. Colorful coral reefs provide homes for countless species, while towering kelp forests create underwater cities. Sea anemones engage in fascinating symbiotic relationships, and microscopic phytoplankton support entire food chains. These organisms are essential for planetary health.",
-      stats: ["50,000+ Plant Species", "Oxygen Production: 70%", "Coral Age: Up to 4,000 years"]
+      stats: ["50,000+ Plant Species", "Oxygen Production: 70%", "Coral Age: Up to 4,000 years"],
+      link: "/aquatic-plants"
     },
     {
       id: "precious-stones",
@@ -31,7 +34,8 @@ const Home = () => {
       image: preciousStonesImg,
       description: "Treasures formed beneath the waves",
       details: "The ocean harbors some of Earth's most valuable treasures. Lustrous pearls form inside oysters over years, aquamarine crystals capture the sea's essence, and rare blue sapphires hide in coastal deposits. These precious stones have captivated humanity for millennia, each with unique properties and fascinating formation stories spanning millions of years.",
-      stats: ["Pearls: 2-7 years to form", "Aquamarine: Mohs 7.5-8", "Value: $100-$1M+"]
+      stats: ["Pearls: 2-7 years to form", "Aquamarine: Mohs 7.5-8", "Value: $100-$1M+"],
+      link: "/precious-stones"
     },
     {
       id: "aquatic-fishes",
@@ -39,7 +43,8 @@ const Home = () => {
       image: aquaticFishesImg,
       description: "Diverse inhabitants of the blue planet",
       details: "With over 34,000 known species, fish represent the most diverse group of vertebrates. From tiny neon tetras to massive whale sharks, from colorful clownfish to electric eels, each species has evolved remarkable adaptations. Some fish migrate thousands of miles, others change gender, and many display intelligence that rivals land animals.",
-      stats: ["34,000+ Species", "Sizes: 8mm to 18m", "Speeds: Up to 110 km/h"]
+      stats: ["34,000+ Species", "Sizes: 8mm to 18m", "Speeds: Up to 110 km/h"],
+      link: "/aquatic-fishes"
     }
   ];
 
@@ -106,10 +111,12 @@ const Home = () => {
                   ))}
                 </div>
 
-                <Button variant="ocean" size="lg" className="group">
-                  Explore {category.title}
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <Link to={category.link}>
+                  <Button variant="ocean" size="lg" className="group">
+                    Explore {category.title}
+                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -131,12 +138,16 @@ const Home = () => {
               From the sunlit surface to the mysterious abyss, every corner of the ocean holds incredible discoveries. Dive deeper into each category and unlock the secrets of the blue planet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Button variant="ocean" size="lg">
-                Start Exploring
-              </Button>
-              <Button variant="outline" size="lg">
-                Learn More
-              </Button>
+              <Link to="/sea-creatures">
+                <Button variant="ocean" size="lg">
+                  Start Exploring
+                </Button>
+              </Link>
+              <Link to="/ai-bot">
+                <Button variant="outline" size="lg">
+                  Learn More
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

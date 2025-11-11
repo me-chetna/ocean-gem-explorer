@@ -14,7 +14,7 @@ const Navbar = () => {
             </span>
           </Link>
 
-          <div className="flex items-center gap-6">
+          <div className="flex items-center justify-center gap-6 flex-1">
             <Link
               to="/"
               className="text-foreground hover:text-primary transition-colors"
