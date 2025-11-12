@@ -112,7 +112,7 @@ const Home = () => {
                 </div>
 
                 <Link to={category.link}>
-                  <Button variant="ocean" size="lg" className="group">
+                  <Button variant="ocean" size="lg" className="mt-5 group">
                     Explore {category.title}
                     <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -138,7 +138,7 @@ const Home = () => {
               From the sunlit surface to the mysterious abyss, every corner of the ocean holds incredible discoveries. Dive deeper into each category and unlock the secrets of the blue planet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-              <Link to="/sea-creatures">
+              <Link to="/ai-bot">
                 <Button variant="ocean" size="lg">
                   Start Exploring
                 </Button>

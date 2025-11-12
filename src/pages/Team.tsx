@@ -6,28 +6,28 @@ import { Mail, Linkedin } from "lucide-react";
 const Team = () => {
   const teamMembers = [
     {
-      name: "Dr. Marina Wells",
-      role: "Marine Biologist",
-      initials: "MW",
-      email: "marina@oceanexplorer.com",
+      name: "Kanishka",
+      role: "2024UCS1633",
+      initials: "K",
+      email: "kanishka.ug24@gmail.com",
     },
     {
-      name: "Prof. Coral Reed",
-      role: "Ocean Researcher",
-      initials: "CR",
-      email: "coral@oceanexplorer.com",
+      name: "Chetna Jain",
+      role: "2024UCS1640",
+      initials: "C",
+      email: "chetna.jain.ug24@gmail.com",
     },
     {
-      name: "Dr. Finn Waters",
-      role: "Fish Species Expert",
-      initials: "FW",
-      email: "finn@oceanexplorer.com",
+      name: "Mrinal Chauhan",
+      role: "2024UCS1629",
+      initials: "MC",
+      email: "mrinal.chauhan.ug24@gmail.com",
     },
     {
-      name: "Dr. Pearl Stone",
-      role: "Gemologist",
-      initials: "PS",
-      email: "pearl@oceanexplorer.com",
+      name: "Harsh Verma",
+      role: "2024UCS1628",
+      initials: "HV",
+      email: "harsh.verma.ug24@gmail.com",
     },
   ];
 

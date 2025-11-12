@@ -1,16 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Waves } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Animated background waves */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-full h-full">
-          <Waves className="absolute top-20 left-10 w-32 h-32 text-primary animate-float" />
-          <Waves className="absolute bottom-40 right-20 w-24 h-24 text-accent animate-float" style={{ animationDelay: '1s' }} />
-          <Waves className="absolute top-1/2 left-1/4 w-20 h-20 text-primary animate-wave" style={{ animationDelay: '0.5s' }} />
-        </div>
+      <div className="absolute inset-0 opacity-60">
+        <img src="https://media.rnztools.nz/rnz/image/upload/s--cLtG8pvy--/ar_16:10,c_fill,f_auto,g_auto,q_auto,w_1050/v1735679798/4KE9M1T_algae_blue_avif?_a=BACCd2AD" alt="Waves Background" className="w-full h-full object-cover animate-slow-spin" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -27,33 +24,29 @@ const HeroSection = () => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              variant="ocean" 
-              size="lg"
-              className="group"
-            >
-              Start Exploring
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-            >
-              Learn More
-            </Button>
+            <Link to="/ai-bot">
+              <Button variant="ocean" size="lg">
+                Start Exploring
+              </Button>
+            </Link>
+            <Link to="/ai-bot">
+              <Button variant="outline" size="lg">
+                Learn More
+              </Button>
+          </Link>
           </div>
 
           <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-2xl mx-auto pt-12">
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-primary">500+</div>
+              <div className="text-3xl md:text-7xl font-bold text-primary">500+</div>
               <div className="text-sm text-muted-foreground">Sea Species</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-accent">200+</div>
+              <div className="text-3xl md:text-7xl font-bold text-accent">200+</div>
               <div className="text-sm text-muted-foreground">Marine Plants</div>
             </div>
             <div className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-coral">100+</div>
+              <div className="text-3xl md:text-7xl font-bold text-coral">100+</div>
               <div className="text-sm text-muted-foreground">Precious Stones</div>
             </div>
           </div>
